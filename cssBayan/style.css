@@ -4,7 +4,6 @@ body {
     height: 100%;
     background: white;
     scroll-behavior: smooth;
-    overflow-y: auto;
 }
 
 h1 {
@@ -25,9 +24,10 @@ h1 {
     display: none;
     width: 85%;
     margin: 0 auto;
-    margin-left: 7%;
     margin-top: 2%;
     align-items: center;
+    transition-property: all;
+    transition-duration: 0.5s;
 }
 
 .mem-start {
@@ -37,6 +37,7 @@ h1 {
     margin-left: 7%;
     margin-top: 2%;
     align-items: center;
+    transition-duration: 0.5s;
 }
 
 .checkbox-mem,
@@ -57,22 +58,26 @@ h1 {
 
 .text {
     margin: 0;
+    transition-duration: 0.5s;
 }
 
 .plus {
     margin: 0;
     font-weight: 900;
+    transition-duration: 0.5s;
 }
 
 .close {
     display: none;
     margin: 0;
+    transition-duration: 0.5s;
 }
 
 .text-start {
     margin: 0;
     font-weight: 700;
     color: blueviolet;
+    transition-duration: 0.5s;
 }
 
 .plus-start {
@@ -93,11 +98,14 @@ h1 {
     width: 100%;
     color: #000;
     cursor: pointer;
-    transition: color 0.4s ease-out;
+
+    transition-duration: 0.5s;
+
 }
 
 .checkbox-mem:checked~.mem {
     display: block;
+    opacity: 1;
 }
 
 .checkbox-mem:checked~.bayan-title {
@@ -163,104 +171,44 @@ h1 {
     }
 }
 
-@media (min-width: 1200px) {}
 
-
-/*
-.bayan-title {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    transition: background 0.2s ease-out;
+@media (min-width: 1200px) {
+    h1 {
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 3%;
+        margin-bottom: 4%;
+        font-size: 2.5em;
+    }
+    .container {
+        width: 65%;
+        font-size: 1.5em;
+        transition-duration: 0.5s;
+    }
+    .container:hover .text-start,
+    .container:hover .text {
+        background-color: rgb(250, 225, 85);
+        font-size: 1.1em;
+    }
+    .mem {
+        display: none;
+        width: 50%;
+        margin: 0 auto;
+        margin-left: 25%;
+        margin-top: 3%;
+        align-items: center;
+    }
+    .mem-start {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        margin-left: 25%;
+        margin-top: 3%;
+        align-items: center;
+    }
+    .bayan:hover .mem,
+    .bayan:hover .mem-start {
+        display: block;
+        width: 40%;
+    }
 }
-
-.bayan-title:after {
-    content: "";
-    display: block;
-    border-style: solid;
-    border-width: 10px 5px 0 5px;
-    border-color: #fff transparent transparent transparent;
-    transform: rotate(0deg);
-    position: absolute;
-    top: 50%;
-    right: 3%;
-    transform: translateY(-50%);
-}
-
-.checkbox-mem:checked~.bayan-title:after {
-    content: "";
-    display: block;
-    border-style: solid;
-    border-width: 0 5px 10px 5px;
-    border-color: transparent transparent #fff transparent;
-    transform: rotate(0deg);
-    position: absolute;
-    top: 50%;
-    right: 3%;
-    transform: translateY(-50%);
-}
-
-.bayan-start {
-    margin-bottom: 2%;
-}
-
-.bayan-start label {
-    display: block;
-    font-size: 1em;
-    padding-left: 5%;
-    border-bottom: solid black;
-    cursor: pointer;
-    background: grey;
-    color: blanchedalmond;
-}
-
-.bayan-start img {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-    margin-top: 2%;
-}
-
-.bayan {
-    margin-bottom: 2%;
-}
-
-.bayan label {
-    display: block;
-    font-size: 1em;
-    padding-left: 5%;
-    border-bottom: solid black;
-    cursor: pointer;
-    background: grey;
-    color: blanchedalmond;
-}
-
-.bayan img {
-    visibility: hidden;
-    opacity: 0;
-    display: none;
-    margin-top: 2%;
-}
-
-.checkbox-mem-start:checked~.mem {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.checkbox-mem-start {
-    display: none;
-    position: relative;
-}
-
-.checkbox-mem:checked~.mem {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-}
-
-.checkbox-mem {
-    display: none;
-    position: relative;
-}
-*/
